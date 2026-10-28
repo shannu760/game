@@ -96,6 +96,10 @@ io.on('connection', (socket) => {
 });
 
 const PORT = 3001;
+app.get('/', (req, res) => {
+  res.send('NEXORA Server is up and running');
+});
+
 httpServer.listen(PORT, () => {
   console.log(`NEXORA Server running on port ${PORT}`);
 });
