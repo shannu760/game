@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001');
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
+const socket = io(BACKEND_URL);
 
 const QuickDrawGame = ({ room, user, onReturn }) => {
   const [gameState, setGameState] = useState('waiting'); // waiting | starting | active | results

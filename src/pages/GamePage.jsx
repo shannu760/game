@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { io } from 'socket.io-client';
-import { Zap, RotateCcw, Home, AlertCircle } from 'lucide-react';
+import { Zap, RotateCcw, Home, AlertCircle, Users, Trophy } from 'lucide-react';
 
-const socket = io('http://localhost:3001');
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
+const socket = io(BACKEND_URL);
 
 const GamePage = () => {
   const { roomId } = useParams();
