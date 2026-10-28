@@ -40,10 +40,10 @@ const LobbyPage = () => {
           <Zap className="text-white fill-white" size={24} />
         </div>
         <div className="flex flex-col gap-6 mt-12">
-          <button className="p-3 text-nexora-primary bg-nexora-primary/10 rounded-xl transition-all"><Gamepad2 size={24} /></button>
-          <button className="p-3 text-nexora-muted hover:text-nexora-text transition-all"><Trophy size={24} /></button>
-          <button className="p-3 text-nexora-muted hover:text-nexora-text transition-all"><User size={24} /></button>
-          <button className="p-3 text-nexora-muted hover:text-nexora-text transition-all"><Settings size={24} /></button>
+          <button onClick={() => navigate('/lobby')} title="Lobby" className="p-3 text-nexora-primary bg-nexora-primary/10 rounded-xl transition-all"><Gamepad2 size={24} /></button>
+          <button onClick={() => navigate('/leaderboard')} title="Leaderboard" className="p-3 text-nexora-muted hover:text-nexora-text hover:bg-nexora-card rounded-xl transition-all"><Trophy size={24} /></button>
+          <button onClick={() => navigate('/profile')} title="Profile" className="p-3 text-nexora-muted hover:text-nexora-text hover:bg-nexora-card rounded-xl transition-all"><User size={24} /></button>
+          <button onClick={() => navigate('/shop')} title="Shop" className="p-3 text-nexora-muted hover:text-nexora-text hover:bg-nexora-card rounded-xl transition-all"><Settings size={24} /></button>
         </div>
         <button
           onClick={logout}
